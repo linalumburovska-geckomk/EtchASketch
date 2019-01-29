@@ -13,7 +13,7 @@ h1{
     margin-top: 50px;
 }
 
-#create, #reset{
+#create, #reset, #rainbow{
     border-radius: 30%;
     font-size: 14px;
     color: maroon;
@@ -29,6 +29,10 @@ h1{
     outline: none;
 }
 
+#rainbow:focus{
+    outline: none;
+}
+
 #container{
     height: 700px;
     width: 960px;
@@ -41,4 +45,8 @@ h1{
 .cell{
     color: black;
     float: left;
+}
+
+#rainbow{
+    display: none;
 }
