@@ -4,10 +4,11 @@ var container=document.getElementById("container");
 var rainbow=document.getElementById("rainbow");
 var size=16;
 var cellColor="black";
+var random=false;
 
 create.addEventListener('click', createGrid);
 reset.addEventListener('click',resetGrid);
-rainbow.addEventListener('click',changeColor);
+
 
 function createGrid(){
 
@@ -16,7 +17,10 @@ function createGrid(){
     container.style.display="block";
     rainbow.style.display="inline-block"
     
+
     for(var i = 0 ; i < size*size; i++){
+        console.log(random);    
+
         const cell = document.createElement('div');
         cell.classList.add('cell');
         var h=700/size;
@@ -27,7 +31,13 @@ function createGrid(){
         
                
         cell.addEventListener('mouseover',function(){
-                cell.style.backgroundColor = cellColor;
+            if(random==false) cell.style.backgroundColor = cellColor;
+            else{
+                var red=Math.floor(Math.random() * 256);
+                var green=Math.floor(Math.random() * 256);
+                var blue=Math.floor(Math.random() * 256);
+                cell.style.background='rgb('+red+','+green+','+blue+')';
+                }
         })
         container.appendChild(cell); 
     }
@@ -42,12 +52,9 @@ function resetGrid(){
     container.style.display="none";
     rainbow.style.display="none";
     cellColor="black";
+    random=false;
 }
 
-function changeColor(){
-    // var red=Math.floor((Math.random() * 256));
-    // var green=Math.floor((Math.random() * 256)); 
-    // var blue=Math.floor((Math.random() * 256));
-
-    cellColor="yellow";
+function changeColor(r){
+    random=r;
 }
