@@ -15,10 +15,11 @@ function createGrid(){
     for(var i = 0 ; i < size*size; i++){
         const cell = document.createElement('div');
         cell.classList.add('cell');
-        var hW=700/size;
-       
-        cell.style.height=hW+'px';
-        cell.style.width=hW+'px';
+        var h=700/size;
+        var w=960/size;
+
+        cell.style.height=h+'px';
+        cell.style.width=w+'px';
         
                
         cell.addEventListener('mouseover',function(){
