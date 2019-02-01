@@ -24,21 +24,22 @@ function createGrid(){
 
         const cell = document.createElement('div');
         cell.classList.add('cell');
-        var h=700/size;
-        var w=960/size;
+        var height=700/size;
+        var width=960/size;
 
-        cell.style.height=h+'px';
-        cell.style.width=w+'px';
+        cell.style.height=height+'px';
+        cell.style.width=width+'px';
         
                
         cell.addEventListener('mouseover',function(){
-            if(random==false) cell.style.backgroundColor = cellColor;
-            else{
+            if(random==false) {
+                cell.style.backgroundColor = cellColor;
+            } else {
                 var red=Math.floor(Math.random() * 256);
                 var green=Math.floor(Math.random() * 256);
                 var blue=Math.floor(Math.random() * 256);
                 cell.style.background='rgb('+red+','+green+','+blue+')';
-                }
+            }
         })
         container.appendChild(cell); 
     }
@@ -56,10 +57,10 @@ function resetGrid(){
     random=false;
 }
 
-function changeColor(r){
-    random=r;
+function changeColor(color){
+    random = color;
 }
 
-function backToBlack(r){
-    random =r;
+function backToBlack(color){
+    random = color;
 }
