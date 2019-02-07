@@ -1,19 +1,19 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: antiquewhite;
 }
 
-.header{
+.header {
     margin: auto;
     text-align: center;
 }
 
-h1{
+h1 {
     color: maroon;
     margin-top: 50px;
 }
 
-#create, #reset, #rainbow, #black{
+#create, #reset, #rainbow, #black {
     border-radius: 30%;
     font-size: 14px;
     color: maroon;
@@ -21,23 +21,23 @@ h1{
     background-color: beige
 }
 
-#create:focus{
+#create:focus {
     outline: none;
 }
 
-#reset:focus{
+#reset:focus {
     outline: none;
 }
 
-#rainbow:focus{
+#rainbow:focus {
     outline: none;
 }
 
-#black{
+#black {
     outline: none;
 }
 
-#container{
+#container {
     height: 700px;
     width: 960px;
     background-color: beige;
@@ -46,15 +46,15 @@ h1{
     display: none;
 }
 
-.cell{
+.cell {
     color: black;
     float: left;
 }
 
-#rainbow{
+#rainbow {
    display: none;
 } 
 
-#black{
+#black {
     display: none;
 }
